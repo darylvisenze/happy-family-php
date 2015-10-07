@@ -1,0 +1,12 @@
+FROM ubuntu
+
+# Update the repository sources list
+RUN apt-get update
+
+# Install PHP5
+RUN apt-get install -y php5-common php5-fpm php5-cli
+
+#nginx
+RUN apt-get install -y nginx
+
+
