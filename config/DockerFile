@@ -20,6 +20,9 @@ WORKDIR /usr/share/nginx/html
 #Git Clone Repo
 RUN git clone https://github.com/darylvisenze/happy-family-php.git
 
+#Nginx Config
+COPY /usr/share/nginx/html/happy-family-php/config/nginx-conf /etc/nginx/sites-available/default
+
 #Start Services
 RUN service php5-fpm start
 RUN service nginx start
